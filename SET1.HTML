@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: pink;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    transform: rotate(-45deg);
+    animation: bounce 2s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before { top: -25px; left: 0; }
+.heart:after { left: 25px; top: 0; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-45deg); }
+    50% { transform: translateY(-20px) rotate(-45deg); }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yes-btn {
+    background-color: green;
+    color: white;
+}
+
+.no-btn {
+    background-color: red;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">Will You Marry Me?</h1>
+        <div class="heart"></div>
+        <button class="yes-btn">Yes!</button>
+        <button class="no-btn">Maybe?</button>
+    </div>
+</body>
+</html>
